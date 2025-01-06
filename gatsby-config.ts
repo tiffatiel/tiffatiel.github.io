@@ -21,6 +21,18 @@ const config: GatsbyConfig = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Tiffatiel Art",
+        short_name: "tiffatiel",
+        start_url: "/",
+        background_color: "#fff",
+        theme_color: "#f8cecb",
+        display: `browser`,
+        icon: "src/images/icon.png",
+      },
+    },
   ],
 }
 
