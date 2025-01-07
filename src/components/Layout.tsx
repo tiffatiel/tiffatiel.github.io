@@ -66,10 +66,24 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
           style={{
             marginTop: `var(--space-5)`,
             fontSize: `var(--font-sm)`,
+            display: `flex`,
+            flexDirection: `row`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Independent Comics and Art  &middot; Email: <a href="mailto:tiffatiel@gmail.com">tiffatiel@gmail.com</a> &middot; 
-          {SOCIALS_LINKS.map((social) => <a href={social.url} target="_blank"><FontAwesomeIcon icon={social.faIcon} /></a>)}
+          © {new Date().getFullYear()} &middot; Independent Comics and Art 
+          &middot; Email: <a href="mailto:tiffatiel@gmail.com">tiffatiel@gmail.com</a> &middot; 
+          {SOCIALS_LINKS.map((social) => 
+            <a href={social.url} 
+                target="_blank"
+                style={{
+                  display: `block`,
+                  width: `32px`,
+                  height: `32px`,
+                }}
+            >
+              <FontAwesomeIcon icon={social.faIcon}  width="16" size="lg" />
+            </a>
+          )}
         </footer>
       </div>
     </>

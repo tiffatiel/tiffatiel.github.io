@@ -10,9 +10,6 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -33,7 +30,7 @@ const config: GatsbyConfig = {
         background_color: "#fff",
         theme_color: "#f8cecb",
         display: `browser`,
-        icon: "src/images/icon.png",
+        icon: "static/images/icon.png",
       },
     },
   ],
