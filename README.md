@@ -13,3 +13,9 @@ npm run deploy
 ```
 npm run develop
 ```
+
+## To format code
+
+```
+npm run format
+```

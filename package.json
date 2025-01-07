@@ -2,6 +2,7 @@
   "name": "tiffatiel-art",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "tiffatiel-art",
   "author": "tiffz",
   "keywords": [
@@ -14,7 +15,12 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "deploy": "gatsby build && gh-pages -d public"
+    "deploy": "gatsby build && gh-pages -d public",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --write .",
+    "format": "npm run prettier && npm run lint:fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -29,10 +35,19 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.17.0",
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.3",
     "gh-pages": "^6.3.0",
-    "typescript": "^5.3.3"
+    "globals": "^15.14.0",
+    "husky": "^8.0.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^8.19.1"
   }
 }
