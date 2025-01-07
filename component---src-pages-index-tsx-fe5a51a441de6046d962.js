@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktiffatiel_art=self.webpackChunktiffatiel_art||[]).push([[245],{2783:function(e,t,n){n.r(t),n.d(t,{Head:function(){return r}});var l=n(6540),a=n(2730);const i={color:"#232129",padding:96,fontFamily:"-apple-system, Roboto, sans-serif, serif"};t.default=()=>l.createElement(a.A,null,l.createElement("main",{style:i},l.createElement("h1",null,"Tiffatiel Art")));const r=()=>l.createElement("title",null,"Tiffatiel Art | Independent Comics and Art")}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-fe5a51a441de6046d962.js.map
