@@ -26,6 +26,11 @@ const Header = ({siteTitle}: Props) => (
       <img src="/images/icon.png" alt="Tiffatiel logo" height={64} />
       {siteTitle}
     </Link>
+    <Link to="/">Comics</Link>
+    <Link to="/resources">Resources</Link>
+    <a href="https://store.tiffatiel.com/" target="_blank" rel="noreferrer">
+      Store
+    </a>
   </header>
 );
 

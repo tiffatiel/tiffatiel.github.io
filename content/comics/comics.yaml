@@ -1,0 +1,33 @@
+- name: The Perfect Wedding
+  slug: perfect-wedding
+  year: 2024
+  pageCount: 16
+  links:
+    store: https://store.tiffatiel.com/products/the-perfect-wedding
+- name: "i like you"
+  slug: i-like-you
+  year: 2023
+  pageCount: 8
+  links:
+    store: https://store.tiffatiel.com/products/i-like-you
+    sprocket: https://store.silversprocket.net/products/i-like-you-full-size-by-tiff-zhang
+    webtoons: https://www.webtoons.com/en/canvas/i-like-you/list?title_no=1016411
+    tapas: https://tapas.io/series/ily
+- name: Maya's Best Friend
+  slug: mayas-best-friend
+  year: 2023
+  pageCount: 8
+  links:
+    store: https://store.tiffatiel.com/products/mayas-best-friend
+    sprocket: https://store.silversprocket.net/products/mayas-best-friend-by-tiff-zhang
+    webtoons: https://www.webtoons.com/en/canvas/mayas-best-friend/list?title_no=909784
+    tapas: https://tapas.io/series/Mayas-Best-Friend
+- name: Eliza's Wish
+  slug: elizas-wish
+  year: 2023
+  pageCount: 8
+  links:
+    store: https://store.tiffatiel.com/products/elizas-wish
+    sprocket: https://store.silversprocket.net/products/elizas-wish-by-tiff-zhang
+    webtoons: https://www.webtoons.com/en/canvas/elizas-wish/list?title_no=843968
+    tapas: https://tapas.io/series/eliza

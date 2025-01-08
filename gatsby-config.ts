@@ -1,4 +1,4 @@
-import type {GatsbyConfig} from "gatsby";
+import type {GatsbyConfig, Node} from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -10,6 +10,7 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    "gatsby-plugin-mdx",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -31,6 +32,33 @@ const config: GatsbyConfig = {
         theme_color: "#f8cecb",
         display: `browser`,
         icon: "static/images/icon.png",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/resources`,
+        name: `resources`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/comics`,
+        name: `comics`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-yaml`,
+      options: {
+        // Conditionally set the typeName so that we both use a lowercased and capitalized type name
+        typeName: ({node}: {node: Node}) => {
+          const name = node.sourceInstanceName;
+          if (name === `comics`) {
+            return `Comic`;
+          }
+          return name;
+        },
       },
     },
   ],
