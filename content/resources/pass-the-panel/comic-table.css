@@ -1,0 +1,19 @@
+table.comic-table {
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+table.comic-table,
+.comic-table td {
+  border: 3px solid #222;
+}
+
+table.comic-table td {
+  width: 100px;
+  height: 100px;
+}
+
+table.comic-table img {
+  max-width: 100%;
+  max-height: 100%;
+}
