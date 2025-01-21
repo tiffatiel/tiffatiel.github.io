@@ -1,4 +1,4 @@
-import type {GatsbyConfig, Node} from "gatsby";
+import type {GatsbyConfig} from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -10,12 +10,11 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-mdx",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          "G-PDY264TGX1", // Google Analytics / GA
+          `G-PDY264TGX1`, // Google Analytics / GA
         ],
         gtagConfig: {
           anonymize_ip: true,
@@ -25,13 +24,13 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Tiffatiel Art",
-        short_name: "tiffatiel",
-        start_url: "/",
-        background_color: "#fff",
-        theme_color: "#f8cecb",
+        name: `Tiffatiel Art`,
+        short_name: `tiffatiel`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#f8cecb`,
         display: `browser`,
-        icon: "static/images/icon.png",
+        icon: `static/images/icon.png`,
       },
     },
     {
@@ -48,19 +47,11 @@ const config: GatsbyConfig = {
         name: `comics`,
       },
     },
-    {
-      resolve: `gatsby-transformer-yaml`,
-      options: {
-        // Conditionally set the typeName so that we both use a lowercased and capitalized type name
-        typeName: ({node}: {node: Node}) => {
-          const name = node.sourceInstanceName;
-          if (name === `comics`) {
-            return `Comic`;
-          }
-          return name;
-        },
-      },
-    },
+    `gatsby-plugin-mdx`,
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-yaml`,
   ],
 };
 

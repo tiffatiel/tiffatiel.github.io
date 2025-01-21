@@ -1,13 +1,102 @@
 - name: The Perfect Wedding
   slug: perfect-wedding
   year: 2024
-  pageCount: 16
+  description: >
+    Lana has always dreamed of having a wedding where every detail was perfect.
+    But when her wedding day comes, it's nothing like she expected. The
+    Perfect Wedding is a cute, sapphic romance about expectations and living
+    freely.
+  cover:
+    outerFront: "./images/perfect-wedding/outer-front.png"
+    innerFront: "./images/perfect-wedding/inner-front.png"
+    innerBack: "./images/perfect-wedding/inner-back.png"
+    outerBack: "./images/perfect-wedding/outer-back.png"
+  pages:
+    - "./images/perfect-wedding/1.png"
+    - "./images/perfect-wedding/2.png"
+    - "./images/perfect-wedding/3.png"
+    - "./images/perfect-wedding/4.png"
+    - "./images/perfect-wedding/5.png"
+    - "./images/perfect-wedding/6.png"
+    - "./images/perfect-wedding/7.png"
+    - "./images/perfect-wedding/8.png"
+    - "./images/perfect-wedding/9.png"
+    - "./images/perfect-wedding/10.png"
+    - "./images/perfect-wedding/11.png"
+    - "./images/perfect-wedding/12.png"
+    - "./images/perfect-wedding/13.png"
+    - "./images/perfect-wedding/14.png"
+    - "./images/perfect-wedding/15.png"
+    - "./images/perfect-wedding/16.png"
   links:
     store: https://store.tiffatiel.com/products/the-perfect-wedding
+- name: Between Walks
+  slug: between-walks
+  year: 2024
+  description: >
+    A webcomic about the private life of dogs! Originally conceived as
+    "absurdist dog comics", Between Walks evolved over time to include a mix
+    of goofy and emotional strips.
+  cover:
+    outerFront: "./images/between-walks/outer-front.png"
+    innerFront: "./images/between-walks/inner-front.png"
+    innerBack: "./images/between-walks/inner-back.png"
+    outerBack: "./images/between-walks/outer-back.png"
+  pages:
+    - "./images/between-walks/1.png"
+    - "./images/between-walks/2.png"
+    - "./images/between-walks/3.png"
+    - "./images/between-walks/4.png"
+    - "./images/between-walks/5.png"
+    - "./images/between-walks/6.png"
+    - "./images/between-walks/7.png"
+    - "./images/between-walks/8.png"
+    - "./images/between-walks/9.png"
+    - "./images/between-walks/10.png"
+    - "./images/between-walks/11.png"
+    - "./images/between-walks/12.png"
+    - "./images/between-walks/13.png"
+    - "./images/between-walks/14.png"
+    - "./images/between-walks/15.png"
+    - "./images/between-walks/16.png"
+    - "./images/between-walks/17.png"
+    - "./images/between-walks/18.png"
+    - "./images/between-walks/19.png"
+    - "./images/between-walks/20.png"
+    - "./images/between-walks/21.png"
+    - "./images/between-walks/22.png"
+    - "./images/between-walks/23.png"
+    - "./images/between-walks/24.png"
+    - "./images/between-walks/25.png"
+    - "./images/between-walks/26.png"
+    - "./images/between-walks/27.png"
+    - "./images/between-walks/28.png"
+    - "./images/between-walks/29.png"
+    - "./images/between-walks/30.png"
+  links:
+    instagram: https://www.instagram.com/betweenwalks
+    x: https://x.com/betweenwalks
+    facebook: https://www.facebook.com/betweenwalks
+    tumblr: https://betweenwalks.art/
 - name: "i like you"
   slug: i-like-you
   year: 2023
-  pageCount: 8
+  description: >
+    Rose admires Sylvia and wants to confess to her. But does Sylvia like her
+    back? "i like you" is a cute sapphic romance about falling in love, even
+    when you're not perfect.
+  cover:
+    outerFront: "./images/i-like-you/outer-front.png"
+    innerFront: "./images/i-like-you/inner-front.png"
+    innerBack: "./images/i-like-you/inner-back.png"
+    outerBack: "./images/i-like-you/outer-back.png"
+  pages:
+    - "./images/i-like-you/1.png"
+    - "./images/i-like-you/2.png"
+    - "./images/i-like-you/3.png"
+    - "./images/i-like-you/4.png"
+    - "./images/i-like-you/5.png"
+    - "./images/i-like-you/6.png"
   links:
     store: https://store.tiffatiel.com/products/i-like-you
     sprocket: https://store.silversprocket.net/products/i-like-you-full-size-by-tiff-zhang
@@ -16,7 +105,22 @@
 - name: Maya's Best Friend
   slug: mayas-best-friend
   year: 2023
-  pageCount: 8
+  description: >
+    Maya has one wish: a friend. When her dream starts to come true, she finds
+    herself at the start of a lifelong adventure. Maya's Best Friend is a
+    contemplative story about the changes we experience as we grow up.
+  cover:
+    outerFront: "./images/mayas-best-friend/outer-front.png"
+    innerFront: "./images/mayas-best-friend/inner-front.png"
+    innerBack: "./images/mayas-best-friend/inner-back.png"
+    outerBack: "./images/mayas-best-friend/outer-back.png"
+  pages:
+    - "./images/mayas-best-friend/1.png"
+    - "./images/mayas-best-friend/2.png"
+    - "./images/mayas-best-friend/3.png"
+    - "./images/mayas-best-friend/4.png"
+    - "./images/mayas-best-friend/5.png"
+    - "./images/mayas-best-friend/6.png"
   links:
     store: https://store.tiffatiel.com/products/mayas-best-friend
     sprocket: https://store.silversprocket.net/products/mayas-best-friend-by-tiff-zhang
@@ -25,7 +129,21 @@
 - name: Eliza's Wish
   slug: elizas-wish
   year: 2023
-  pageCount: 8
+  description: >
+    Eliza is a lonely girl who has always loved the stars. One night, Eliza
+    finds herself unexpectedly invited on a magical adventure.
+  cover:
+    outerFront: "./images/elizas-wish/outer-front.png"
+    innerFront: "./images/elizas-wish/inner-front.png"
+    innerBack: "./images/elizas-wish/inner-back.png"
+    outerBack: "./images/elizas-wish/outer-back.png"
+  pages:
+    - "./images/elizas-wish/1.png"
+    - "./images/elizas-wish/2.png"
+    - "./images/elizas-wish/3.png"
+    - "./images/elizas-wish/4.png"
+    - "./images/elizas-wish/5.png"
+    - "./images/elizas-wish/6.png"
   links:
     store: https://store.tiffatiel.com/products/elizas-wish
     sprocket: https://store.silversprocket.net/products/elizas-wish-by-tiff-zhang
