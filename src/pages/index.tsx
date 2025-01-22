@@ -19,6 +19,7 @@ const IndexPage = ({data}: PageProps<Queries.AllComicsQuery>) => {
           <div key={c.id} style={{display: "flex", flexDirection: "row"}}>
             <Link to={`/comics/${c.slug}`}>
               <GatsbyImage
+                loading="eager"
                 image={getImage(c.cover?.outerFront?.childImageSharp)}
                 style={{minWidth: 200}}
                 alt={`${c.name}`}

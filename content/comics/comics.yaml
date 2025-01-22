@@ -73,6 +73,9 @@
     - "./images/between-walks/28.png"
     - "./images/between-walks/29.png"
     - "./images/between-walks/30.png"
+    - "./images/between-walks/31.png"
+    - "./images/between-walks/32.png"
+    - "./images/between-walks/33.png"
   links:
     instagram: https://www.instagram.com/betweenwalks
     x: https://x.com/betweenwalks
@@ -106,9 +109,9 @@
   slug: mayas-best-friend
   year: 2023
   description: >
-    Maya has one wish: a friend. When her dream starts to come true, she has no
-    idea where life will take her next! Maya's Best Friend is a story about the
-    changes we experience as we grow up.
+    Maya has one wish: to make a friend. When her dream starts to come true,
+    she has no idea where life will take her next! Maya's Best Friend is a
+    story about the changes we experience as we grow up.
   cover:
     outerFront: "./images/mayas-best-friend/outer-front.png"
     innerFront: "./images/mayas-best-friend/inner-front.png"

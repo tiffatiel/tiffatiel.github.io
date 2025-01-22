@@ -3,6 +3,10 @@ import Layout from "../../components/Layout";
 import {graphql, PageProps} from "gatsby";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 
+const COMIC_PAGE_STYLE = {
+  marginBottom: '32px',
+};
+
 const ComicPage = ({data}: PageProps<Queries.ComicQuery>) => {
   const comic = data.comicsYaml;
   if (!comic) throw "Comic not found";
@@ -11,17 +15,20 @@ const ComicPage = ({data}: PageProps<Queries.ComicQuery>) => {
     <Layout>
       <h1>{comic.name}</h1>
       <GatsbyImage
+        style={COMIC_PAGE_STYLE}
         image={getImage(comic.cover?.outerFront?.childImageSharp)}
         alt={`${comic.name} Front Cover`}
       />
       {(comic.pages || []).map((page, i) => (
         <GatsbyImage
+          style={COMIC_PAGE_STYLE}
           key={page.name}
           image={getImage(page.childImageSharp)}
           alt={`${comic.name} Page ${i + 1}`}
         />
       ))}
       <GatsbyImage
+        style={COMIC_PAGE_STYLE}
         image={getImage(comic.cover?.outerBack?.childImageSharp)}
         alt={`${comic.name} Back Cover`}
       />

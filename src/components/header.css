@@ -1,0 +1,29 @@
+header {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  background: var(--color-primary);
+  height: var(--header-height);
+  margin: 0 auto;
+  padding: 0 var(--size-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-height: 100%;
+  color: white;
+  text-shadow: #0000007b 1px 1px 5px;
+}
+
+header img {
+  max-height: var(--header-height);
+  padding: 0;
+  margin: 0;
+}
