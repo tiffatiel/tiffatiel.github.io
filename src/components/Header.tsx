@@ -9,14 +9,16 @@ interface Props {
 
 const Header = ({siteTitle}: Props) => (
   <header>
-    <Link to="/">
-      <img src="/images/icon.png" alt={siteTitle} />
-    </Link>
-    <Link to="/">Comics</Link>
-    <Link to="/resources">Resources</Link>
-    <a href="https://store.tiffatiel.com/" target="_blank" rel="noreferrer">
-      Store
-    </a>
+    <div className="header-content">
+      <Link to="/" className="logo-link">
+        <img src="/images/icon.png" alt={siteTitle} />
+      </Link>
+      <Link to="/">Comics</Link>
+      <Link to="/resources">Resources</Link>
+      <a href="https://store.tiffatiel.com/" target="_blank" rel="noreferrer">
+        Store
+      </a>
+    </div>
   </header>
 );
 

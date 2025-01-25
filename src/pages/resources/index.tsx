@@ -39,7 +39,7 @@ export const query = graphql`
     allMdx(sort: {frontmatter: {created: DESC}}) {
       nodes {
         frontmatter {
-          created(fromNow: true)
+          created
           title
           slug
         }

@@ -1,0 +1,58 @@
+ul.reading-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+ul.reading-options li {
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+
+ul.reading-options li a {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  border-radius: 24px;
+  border: 1px solid var(--color-primary);
+  padding: 4px 8px;
+  padding-right: 16px;
+  line-height: 100%;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  transition:
+    background-color 0.3s linear,
+    color 0.3s linear;
+}
+
+ul.reading-options li a:hover {
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+}
+
+.comic {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 8px;
+  align-items: flex-start;
+  margin-top: 16px;
+}
+
+.comic h2 {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 500px) {
+  .comic {
+    flex-direction: column;
+  }
+}

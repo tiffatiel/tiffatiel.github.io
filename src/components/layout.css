@@ -1,7 +1,7 @@
 :root {
   --border-radius: 4px;
   --color-text: #333;
-  --color-primary: #FA7395;
+  --color-primary: #ea5c80;
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
@@ -33,8 +33,14 @@ html {
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   overflow-y: scroll;
-  background: rgb(255,223,231);
-  background: fixed linear-gradient(180deg, rgba(255,223,231,1) 0%, rgba(255,243,246,1) 16%, rgba(255,255,255,1) 100%);
+  background: rgb(255, 223, 231);
+  background: fixed
+    linear-gradient(
+      180deg,
+      rgba(255, 223, 231, 1) 0%,
+      rgba(255, 243, 246, 1) 16%,
+      rgba(255, 255, 255, 1) 100%
+    );
 }
 body {
   -moz-osx-font-smoothing: grayscale;
@@ -74,7 +80,7 @@ dfn {
 }
 h1 {
   margin: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   padding: 0;
   line-height: var(--line-height-dense);
   letter-spacing: -0.01em;

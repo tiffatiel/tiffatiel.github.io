@@ -17,7 +17,6 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import {config} from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 
-
 const Layout: React.FC<React.PropsWithChildren> = ({children}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -32,19 +31,16 @@ const Layout: React.FC<React.PropsWithChildren> = ({children}) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Tiffatiel Art`} />
-      <div
+      <main
         style={{
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
           padding: `var(--size-gutter)`,
-          background: 'white',
+          marginTop: `32px`,
+          background: "white",
         }}>
-        <main
-          style={{marginTop: `var(--header-height)`}}
-        >
-          {children}
-        </main>
-      </div>
+        {children}
+      </main>
       <footer
         style={{
           marginTop: `64px`,
@@ -52,16 +48,15 @@ const Layout: React.FC<React.PropsWithChildren> = ({children}) => {
           display: `flex`,
           flexDirection: `row`,
           justifyContent: `center`,
+          padding: `16px`,
         }}>
-          <div>
-            © {new Date().getFullYear()} Tiffatiel &middot; Independent Comics and Art
-            &middot; Email: {" "}
-            <a href="mailto:tiffatiel@gmail.com">tiffatiel@gmail.com</a> &middot;
-          </div>
-          <SocialLinks 
-            style={{marginLeft: '8px'}}
-          />
-        </footer>
+        <div>
+          © {new Date().getFullYear()} Tiffatiel &middot; Independent Comics
+          and Art &middot; Email:{" "}
+          <a href="mailto:tiffatiel@gmail.com">tiffatiel@gmail.com</a> &middot;
+        </div>
+        <SocialLinks style={{marginLeft: "8px"}} />
+      </footer>
     </>
   );
 };

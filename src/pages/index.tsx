@@ -3,10 +3,22 @@ import {graphql, Link, PageProps} from "gatsby";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faInstagram,
+  faXTwitter,
+  faTumblr,
+  faBluesky,
+} from "@fortawesome/free-brands-svg-icons";
+import {IconProp} from "@fortawesome/fontawesome-svg-core";
+import {faBook, faGlobe, faStar} from "@fortawesome/free-solid-svg-icons";
+
+import "./comics.css";
+
 const IndexPage = ({data}: PageProps<Queries.AllComicsQuery>) => {
   return (
     <Layout>
-      <h1>My comics!</h1>
       <p>
         {`I'm an independent comic artist focused on creating short stories with
         cute art and emotional themes. My work is available to read both for
@@ -16,33 +28,55 @@ const IndexPage = ({data}: PageProps<Queries.AllComicsQuery>) => {
         </a>
         .
         {data.allComicsYaml?.nodes.map(c => (
-          <div key={c.id} style={{display: "flex", flexDirection: "row"}}>
+          <div key={c.id} className="comic">
             <Link to={`/comics/${c.slug}`}>
               <GatsbyImage
                 loading="eager"
                 image={getImage(c.cover?.outerFront?.childImageSharp)}
-                style={{minWidth: 200}}
                 alt={`${c.name}`}
+                style={{minWidth: 200}}
               />
             </Link>
-            <div>
+            <div className="comic-description">
               <h2>
                 <Link to={`/comics/${c.slug}`}>{c.name}</Link> ({c.year})
               </h2>
               <p>{c.description}</p>
-              <p>Available on:</p>
-              <ul>
+              <ul className="reading-options">
                 <li>
-                  <Link to={`/comics/${c.slug}`}>This site</Link>
+                  <Link to={`/comics/${c.slug}`}>
+                    <FontAwesomeIcon icon={faGlobe} width="12" size="lg" />
+                    This site
+                  </Link>
                 </li>
-                <AvailableOn link={c.links?.store} name="Print" />
+                <AvailableOn
+                  link={c.links?.store}
+                  name="Print"
+                  faIcon={faBook}
+                />
                 <AvailableOn link={c.links?.webtoons} name="Webtoons" />
                 <AvailableOn link={c.links?.tapas} name="Tapas" />
-                <AvailableOn link={c.links?.tumblr} name="Tumblr" />
-                <AvailableOn link={c.links?.bluesky} name="BlueSky" />
-                <AvailableOn link={c.links?.x} name="X" />
-                <AvailableOn link={c.links?.instagram} name="Instagram" />
-                <AvailableOn link={c.links?.facebook} name="Facebook" />
+                <AvailableOn
+                  link={c.links?.tumblr}
+                  name="Tumblr"
+                  faIcon={faTumblr}
+                />
+                <AvailableOn
+                  link={c.links?.bluesky}
+                  name="BlueSky"
+                  faIcon={faBluesky}
+                />
+                <AvailableOn link={c.links?.x} name="X" faIcon={faXTwitter} />
+                <AvailableOn
+                  link={c.links?.instagram}
+                  name="Instagram"
+                  faIcon={faInstagram}
+                />
+                <AvailableOn
+                  link={c.links?.facebook}
+                  name="Facebook"
+                  faIcon={faFacebookF}
+                />
               </ul>
             </div>
           </div>
@@ -55,13 +89,15 @@ const IndexPage = ({data}: PageProps<Queries.AllComicsQuery>) => {
 interface AvailableOnProps {
   link?: string | null;
   name: string;
+  faIcon?: IconProp;
 }
 
-const AvailableOn = ({link, name}: AvailableOnProps) => {
+const AvailableOn = ({link, name, faIcon}: AvailableOnProps) => {
   if (!link) return <></>;
   return (
     <li>
       <a href={link || ""} target="_blank" rel="noreferrer">
+        <FontAwesomeIcon icon={faIcon || faStar} width="12" size="lg" />
         {name}
       </a>
     </li>

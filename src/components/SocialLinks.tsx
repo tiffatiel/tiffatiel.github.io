@@ -42,28 +42,29 @@ interface PropTypes {
 }
 
 const SocialLinks: React.FC<PropTypes> = ({style}) => {
-  return <div
-    style={{
-      ...style,
-      display: "flex",
-      flexDirection: "row",
-    }}>
-    {SOCIAL_LINKS.map(social => (
-      <a
-        key={social.url}
-        href={social.url}
-        target="_blank"
-        style={{
-          display: `block`,
-          width: `32px`,
-          height: `32px`,
-        }}
-        rel="noreferrer"
-      >
-        <FontAwesomeIcon icon={social.faIcon} width="16" size="lg" />
-      </a>
-    ))}
-  </div>;
-}
+  return (
+    <div
+      style={{
+        ...style,
+        display: "flex",
+        flexDirection: "row",
+      }}>
+      {SOCIAL_LINKS.map(social => (
+        <a
+          key={social.url}
+          href={social.url}
+          target="_blank"
+          style={{
+            display: `block`,
+            width: `32px`,
+            height: `32px`,
+          }}
+          rel="noreferrer">
+          <FontAwesomeIcon icon={social.faIcon} width="16" size="lg" />
+        </a>
+      ))}
+    </div>
+  );
+};
 
 export default SocialLinks;

@@ -4,7 +4,7 @@ import {graphql, Link, PageProps} from "gatsby";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 
 const COMIC_PAGE_STYLE = {
-  marginBottom: '32px',
+  marginBottom: "32px",
 };
 
 const ComicPage = ({data}: PageProps<Queries.ComicQuery>) => {
@@ -13,17 +13,18 @@ const ComicPage = ({data}: PageProps<Queries.ComicQuery>) => {
 
   return (
     <Layout>
-      <div 
+      <div
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          flexShrink: '0',
-          alignItems: 'center',
-        }}
-      >
+          display: "flex",
+          flexDirection: "column",
+          flexShrink: "0",
+          alignItems: "center",
+        }}>
         <h1>{comic.name}</h1>
         <em>Published {comic.year}</em>
-        <Link to="/">&larr; Back to comics</Link>
+        <Link to="/" style={{margin: `16px`}}>
+          &larr; Back to comics
+        </Link>
         <GatsbyImage
           style={COMIC_PAGE_STYLE}
           image={getImage(comic.cover?.outerFront?.childImageSharp)}
