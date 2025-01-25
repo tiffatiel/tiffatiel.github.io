@@ -85,7 +85,7 @@
     x: https://x.com/betweenwalks
     facebook: https://www.facebook.com/betweenwalks
     tumblr: https://betweenwalks.art/
-- name: "i like you"
+- name: '"i like you"'
   slug: i-like-you
   year: 2023
   description: >
