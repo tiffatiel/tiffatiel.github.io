@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../../components/Layout";
 import {graphql, Link, PageProps} from "gatsby";
-import {GatsbyImage, getImage} from "gatsby-plugin-image";
+import {GatsbyImage, getImage, getSrc} from "gatsby-plugin-image";
 import Seo from "../../components/Seo";
 import {ReadingLinks} from "../../components/ReadingLinks";
 
@@ -63,6 +63,7 @@ export const query = graphql`
       slug
       year
       id
+      description
       links {
         store
         webtoons
@@ -96,7 +97,11 @@ export const query = graphql`
 `;
 
 export const Head = ({data}: PageProps<Queries.ComicQuery>) => (
-  <Seo title={data.comicsYaml?.name} />
+  <Seo
+    title={data.comicsYaml?.name}
+    description={data.comicsYaml?.description}
+    image={getSrc(data.comicsYaml?.cover?.outerFront?.childImageSharp)}
+  />
 );
 
 export default ComicPage;
