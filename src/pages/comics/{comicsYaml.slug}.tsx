@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 import {graphql, Link, PageProps} from "gatsby";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import Seo from "../../components/Seo";
-import { ReadingLinks } from "../../components/ReadingLinks";
+import {ReadingLinks} from "../../components/ReadingLinks";
 
 const COMIC_PAGE_STYLE = {
   marginBottom: "32px",
@@ -45,10 +45,10 @@ const ComicPage = ({data}: PageProps<Queries.ComicQuery>) => {
           image={getImage(comic.cover?.outerBack?.childImageSharp)}
           alt={`${comic.name} Back Cover`}
         />
-        
-        <p style={{marginTop: '128px', textAlign: 'center', maxWidth: '512px'}}>
-          If you liked {comic.name}, you can support this comic by sharing it
-          on social media or purchasing a print copy!
+
+        <p style={{marginTop: "128px", textAlign: "center", maxWidth: "512px"}}>
+          If you liked {comic.name}, you can support this comic by sharing it on
+          social media or purchasing a print copy!
         </p>
         <ReadingLinks links={comic.links} />
       </div>

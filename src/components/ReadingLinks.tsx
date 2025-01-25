@@ -46,31 +46,27 @@ interface SupportedLinks {
   facebook?: string | null;
 }
 
-export const ReadingLinks: React.FC<ReadingLinksProps> = ({siteLink, links}) => {
-  return <ul className="reading-options">
-      {siteLink ? <li>
-        <Link to={siteLink}>
-          <FontAwesomeIcon icon={faGlobe} width="12" size="lg" />
-          This site
-        </Link>
-      </li> : <></>}
-      <AvailableOn
-        link={links?.store}
-        name="Print"
-        faIcon={faBook}
-      />
+export const ReadingLinks: React.FC<ReadingLinksProps> = ({
+  siteLink,
+  links,
+}) => {
+  return (
+    <ul className="reading-options">
+      {siteLink ? (
+        <li>
+          <Link to={siteLink}>
+            <FontAwesomeIcon icon={faGlobe} width="12" size="lg" />
+            This site
+          </Link>
+        </li>
+      ) : (
+        <></>
+      )}
+      <AvailableOn link={links?.store} name="Print" faIcon={faBook} />
       <AvailableOn link={links?.webtoons} name="Webtoons" />
       <AvailableOn link={links?.tapas} name="Tapas" />
-      <AvailableOn
-        link={links?.tumblr}
-        name="Tumblr"
-        faIcon={faTumblr}
-      />
-      <AvailableOn
-        link={links?.bluesky}
-        name="BlueSky"
-        faIcon={faBluesky}
-      />
+      <AvailableOn link={links?.tumblr} name="Tumblr" faIcon={faTumblr} />
+      <AvailableOn link={links?.bluesky} name="BlueSky" faIcon={faBluesky} />
       <AvailableOn link={links?.x} name="X" faIcon={faXTwitter} />
       <AvailableOn
         link={links?.instagram}
@@ -82,5 +78,6 @@ export const ReadingLinks: React.FC<ReadingLinksProps> = ({siteLink, links}) => 
         name="Facebook"
         faIcon={faFacebookF}
       />
-    </ul>;
-}
+    </ul>
+  );
+};

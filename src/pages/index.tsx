@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 
 import "./comics.css";
-import { ReadingLinks } from "../components/ReadingLinks";
+import {ReadingLinks} from "../components/ReadingLinks";
 
 const IndexPage = ({data}: PageProps<Queries.AllComicsQuery>) => {
   return (
@@ -20,30 +20,30 @@ const IndexPage = ({data}: PageProps<Queries.AllComicsQuery>) => {
         .
         {data.allComicsYaml?.nodes.map(c => {
           const link = `/comics/${c.slug}`;
-          return <div key={c.id} className="comic">
-            <Link to={link}>
-              <GatsbyImage
-                loading="eager"
-                image={getImage(c.cover?.outerFront?.childImageSharp)}
-                alt={`${c.name}`}
-                style={{minWidth: 200}}
-              />
-            </Link>
-            <div className="comic-description">
-              <h2>
-                <Link to={link}>{c.name}</Link> ({c.year})
-              </h2>
-              <p>{c.description}</p>
-              <ReadingLinks siteLink={link} links={c.links} />
+          return (
+            <div key={c.id} className="comic">
+              <Link to={link}>
+                <GatsbyImage
+                  loading="eager"
+                  image={getImage(c.cover?.outerFront?.childImageSharp)}
+                  alt={`${c.name}`}
+                  style={{minWidth: 200}}
+                />
+              </Link>
+              <div className="comic-description">
+                <h2>
+                  <Link to={link}>{c.name}</Link> ({c.year})
+                </h2>
+                <p>{c.description}</p>
+                <ReadingLinks siteLink={link} links={c.links} />
+              </div>
             </div>
-          </div>;
+          );
         })}
       </p>
     </Layout>
   );
 };
-
-
 
 export const query = graphql`
   query AllComics {
