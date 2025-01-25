@@ -30,6 +30,8 @@
     - "./images/perfect-wedding/16.png"
   links:
     store: https://store.tiffatiel.com/products/the-perfect-wedding
+    x: https://x.com/tiffatiel/status/1882986433369215040
+    tumblr: https://tiffatiel.tumblr.com/post/773612817505976320/the-perfect-wedding
 - name: Between Walks
   slug: between-walks
   year: 2024
@@ -105,6 +107,9 @@
     sprocket: https://store.silversprocket.net/products/i-like-you-full-size-by-tiff-zhang
     webtoons: https://www.webtoons.com/en/canvas/i-like-you/list?title_no=1016411
     tapas: https://tapas.io/series/ily
+    x: https://x.com/tiffatiel/status/1721403938849820809
+    tumblr: https://tiffatiel.tumblr.com/post/733213712207560704/i-like-you
+    bluesky: https://bsky.app/profile/tiffatiel.bsky.social/post/3lc4m253gp22h
 - name: Maya's Best Friend
   slug: mayas-best-friend
   year: 2023
@@ -129,6 +134,9 @@
     sprocket: https://store.silversprocket.net/products/mayas-best-friend-by-tiff-zhang
     webtoons: https://www.webtoons.com/en/canvas/mayas-best-friend/list?title_no=909784
     tapas: https://tapas.io/series/Mayas-Best-Friend
+    x: https://x.com/tiffatiel/status/1708501916022612188
+    tumblr: https://tiffatiel.tumblr.com/post/721691798471311360/maya
+    bluesky: https://bsky.app/profile/tiffatiel.bsky.social/post/3lbs3an3rd22t
 - name: Eliza's Wish
   slug: elizas-wish
   year: 2023
@@ -152,3 +160,6 @@
     sprocket: https://store.silversprocket.net/products/elizas-wish-by-tiff-zhang
     webtoons: https://www.webtoons.com/en/canvas/elizas-wish/list?title_no=843968
     tapas: https://tapas.io/series/eliza
+    x: https://x.com/tiffatiel/status/1708205035166019932
+    tumblr: https://tiffatiel.tumblr.com/post/721688407887265792/eliza
+    bluesky: https://bsky.app/profile/tiffatiel.bsky.social/post/3latxbndm7c2u

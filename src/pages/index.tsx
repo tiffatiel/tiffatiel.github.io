@@ -38,6 +38,8 @@ const IndexPage = ({data}: PageProps<Queries.AllComicsQuery>) => {
                 <AvailableOn link={c.links?.store} name="Print" />
                 <AvailableOn link={c.links?.webtoons} name="Webtoons" />
                 <AvailableOn link={c.links?.tapas} name="Tapas" />
+                <AvailableOn link={c.links?.tumblr} name="Tumblr" />
+                <AvailableOn link={c.links?.bluesky} name="BlueSky" />
                 <AvailableOn link={c.links?.x} name="X" />
                 <AvailableOn link={c.links?.instagram} name="Instagram" />
                 <AvailableOn link={c.links?.facebook} name="Facebook" />
@@ -79,6 +81,8 @@ export const query = graphql`
           store
           webtoons
           tapas
+          tumblr
+          bluesky
           x
           instagram
           facebook

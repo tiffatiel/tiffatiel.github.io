@@ -219,6 +219,7 @@ type ComicsYamlGroupConnection_sumArgs = {
 };
 
 type ComicsYamlLinks = {
+  readonly bluesky: Maybe<Scalars['String']>;
   readonly facebook: Maybe<Scalars['String']>;
   readonly instagram: Maybe<Scalars['String']>;
   readonly sprocket: Maybe<Scalars['String']>;
@@ -230,6 +231,7 @@ type ComicsYamlLinks = {
 };
 
 type ComicsYamlLinksFieldSelector = {
+  readonly bluesky: InputMaybe<FieldSelectorEnum>;
   readonly facebook: InputMaybe<FieldSelectorEnum>;
   readonly instagram: InputMaybe<FieldSelectorEnum>;
   readonly sprocket: InputMaybe<FieldSelectorEnum>;
@@ -241,6 +243,7 @@ type ComicsYamlLinksFieldSelector = {
 };
 
 type ComicsYamlLinksFilterInput = {
+  readonly bluesky: InputMaybe<StringQueryOperatorInput>;
   readonly facebook: InputMaybe<StringQueryOperatorInput>;
   readonly instagram: InputMaybe<StringQueryOperatorInput>;
   readonly sprocket: InputMaybe<StringQueryOperatorInput>;
@@ -252,6 +255,7 @@ type ComicsYamlLinksFilterInput = {
 };
 
 type ComicsYamlLinksSortInput = {
+  readonly bluesky: InputMaybe<SortOrderEnum>;
   readonly facebook: InputMaybe<SortOrderEnum>;
   readonly instagram: InputMaybe<SortOrderEnum>;
   readonly sprocket: InputMaybe<SortOrderEnum>;
@@ -3104,7 +3108,7 @@ type WebPOptions = {
 type AllComicsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type AllComicsQuery = { readonly allComicsYaml: { readonly nodes: ReadonlyArray<{ readonly name: string | null, readonly slug: string | null, readonly year: number | null, readonly id: string, readonly description: string | null, readonly links: { readonly store: string | null, readonly webtoons: string | null, readonly tapas: string | null, readonly x: string | null, readonly instagram: string | null, readonly facebook: string | null } | null, readonly cover: { readonly outerFront: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null }> } };
+type AllComicsQuery = { readonly allComicsYaml: { readonly nodes: ReadonlyArray<{ readonly name: string | null, readonly slug: string | null, readonly year: number | null, readonly id: string, readonly description: string | null, readonly links: { readonly store: string | null, readonly webtoons: string | null, readonly tapas: string | null, readonly tumblr: string | null, readonly bluesky: string | null, readonly x: string | null, readonly instagram: string | null, readonly facebook: string | null } | null, readonly cover: { readonly outerFront: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null }> } };
 
 type AllResourcesQueryVariables = Exact<{ [key: string]: never; }>;
 
