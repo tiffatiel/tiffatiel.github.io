@@ -37,7 +37,7 @@ const Layout: React.FC<React.PropsWithChildren> = ({children}) => {
           maxWidth: `var(--size-content)`,
           padding: `var(--size-gutter)`,
           marginTop: `32px`,
-          background: "white",
+          background: `white`,
         }}>
         {children}
       </main>

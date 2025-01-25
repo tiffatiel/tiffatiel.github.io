@@ -2,6 +2,7 @@ import * as React from "react";
 import {graphql, Link, PageProps} from "gatsby";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
@@ -134,5 +135,7 @@ export const query = graphql`
     }
   }
 `;
+
+export const Head = () => <Seo title="Comics" />;
 
 export default IndexPage;

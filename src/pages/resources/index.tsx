@@ -1,6 +1,7 @@
 import * as React from "react";
 import {graphql, Link, PageProps} from "gatsby";
 import Layout from "../../components/Layout";
+import Seo from "../../components/Seo";
 
 const ResourcesPage = ({data}: PageProps<Queries.AllResourcesQuery>) => {
   return (
@@ -49,5 +50,7 @@ export const query = graphql`
     }
   }
 `;
+
+export const Head = () => <Seo title="Resources" />;
 
 export default ResourcesPage;

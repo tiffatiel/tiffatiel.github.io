@@ -2,6 +2,7 @@ import * as React from "react";
 import Layout from "../../components/Layout";
 import {graphql, Link, PageProps} from "gatsby";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
+import Seo from "../../components/Seo";
 
 const COMIC_PAGE_STYLE = {
   marginBottom: "32px",
@@ -76,5 +77,9 @@ export const query = graphql`
     }
   }
 `;
+
+export const Head = ({data}: PageProps<Queries.ComicQuery>) => (
+  <Seo title={data.comicsYaml?.name} />
+);
 
 export default ComicPage;
