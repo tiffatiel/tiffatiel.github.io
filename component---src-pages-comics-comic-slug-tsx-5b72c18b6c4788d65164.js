@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktiffatiel_art=self.webpackChunktiffatiel_art||[]).push([[819],{336:function(t,e,a){a.r(e);var n=a(6540),l=a(2730);e.default=t=>{let{data:e}=t;const{comic:a}=e;if(!a)throw"Comic not found";return n.createElement(l.A,null,n.createElement("h1",null,a.name))}}}]);
-//# sourceMappingURL=component---src-pages-comics-comic-slug-tsx-5b72c18b6c4788d65164.js.map
