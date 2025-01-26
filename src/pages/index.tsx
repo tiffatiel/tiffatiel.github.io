@@ -20,15 +20,22 @@ const IndexPage = ({data}: PageProps<Queries.AllComicsQuery>) => {
         .
         {data.allComicsYaml?.nodes.map(c => {
           const link = `/comics/${c.slug}`;
+          const image = c.cover?.outerFront?.childImageSharp;
+          const imageData = getImage(image || null);
+
           return (
             <div key={c.id} className="comic">
               <Link to={link}>
-                <GatsbyImage
-                  loading="eager"
-                  image={getImage(c.cover?.outerFront?.childImageSharp)}
-                  alt={`${c.name}`}
-                  style={{minWidth: 200}}
-                />
+                {imageData ? (
+                  <GatsbyImage
+                    loading="eager"
+                    image={imageData}
+                    alt={`${c.name}`}
+                    style={{minWidth: 200}}
+                  />
+                ) : (
+                  <></>
+                )}
               </Link>
               <div className="comic-description">
                 <h2>

@@ -19,6 +19,9 @@ const config: GatsbyConfig = {
         trackingIds: [
           `G-PDY264TGX1`, // Google Analytics / GA
         ],
+        pluginConfig: {
+          respectDNT: true,
+        },
         gtagConfig: {
           anonymize_ip: true,
         },
