@@ -5,9 +5,15 @@ interface PropTypes {
   title?: string | null;
   image?: string | null;
   description?: string | null;
+  canonicalPath?: string | null;
 }
 
-const Seo: React.FC<PropTypes> = ({title, image, description}) => {
+const Seo: React.FC<PropTypes> = ({
+  title,
+  image,
+  description,
+  canonicalPath,
+}) => {
   const {
     title: defaultTitle,
     description: defaultDescription,
@@ -17,6 +23,7 @@ const Seo: React.FC<PropTypes> = ({title, image, description}) => {
   } = useSiteMetadata();
 
   const titleText = title ? `${title} | ${defaultTitle}` : defaultTitle;
+  const canonicalLink = siteUrl + canonicalPath;
 
   const imageUrl = siteUrl + (image || defaultImage);
 
@@ -26,6 +33,14 @@ const Seo: React.FC<PropTypes> = ({title, image, description}) => {
 
       <meta name="image" content={imageUrl} />
 
+      {canonicalPath ? (
+        <>
+          <link rel="canonical" href={canonicalLink} />
+          <meta property="og:url" content={canonicalLink} />
+        </>
+      ) : (
+        <></>
+      )}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={titleText} />
       <meta

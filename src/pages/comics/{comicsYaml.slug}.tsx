@@ -101,6 +101,7 @@ export const Head = ({data}: PageProps<Queries.ComicQuery>) => (
     title={data.comicsYaml?.name}
     description={data.comicsYaml?.description}
     image={getSrc(data.comicsYaml?.cover?.outerFront?.childImageSharp)}
+    canonicalPath={`/comics/${data.comicsYaml?.slug}`}
   />
 );
 
