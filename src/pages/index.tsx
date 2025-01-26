@@ -18,36 +18,36 @@ const IndexPage = ({data}: PageProps<Queries.AllComicsQuery>) => {
           in print
         </a>
         .
-        {data.allComicsYaml?.nodes.map(c => {
-          const link = `/comics/${c.slug}`;
-          const image = c.cover?.outerFront?.childImageSharp;
-          const imageData = getImage(image || null);
-
-          return (
-            <div key={c.id} className="comic">
-              <Link to={link}>
-                {imageData ? (
-                  <GatsbyImage
-                    loading="eager"
-                    image={imageData}
-                    alt={`${c.name}`}
-                    style={{minWidth: 200}}
-                  />
-                ) : (
-                  <></>
-                )}
-              </Link>
-              <div className="comic-description">
-                <h2>
-                  <Link to={link}>{c.name}</Link> ({c.year})
-                </h2>
-                <p>{c.description}</p>
-                <ReadingLinks siteLink={link} links={c.links} />
-              </div>
-            </div>
-          );
-        })}
       </p>
+      {data.allComicsYaml?.nodes.map(c => {
+        const link = `/comics/${c.slug}`;
+        const image = c.cover?.outerFront?.childImageSharp;
+        const imageData = getImage(image || null);
+
+        return (
+          <div key={c.id} className="comic">
+            <Link to={link}>
+              {imageData ? (
+                <GatsbyImage
+                  loading="eager"
+                  image={imageData}
+                  alt={`${c.name}`}
+                  style={{minWidth: 200}}
+                />
+              ) : (
+                <></>
+              )}
+            </Link>
+            <div className="comic-description">
+              <h2>
+                <Link to={link}>{c.name}</Link> ({c.year})
+              </h2>
+              <p>{c.description}</p>
+              <ReadingLinks siteLink={link} links={c.links} />
+            </div>
+          </div>
+        );
+      })}
     </Layout>
   );
 };
