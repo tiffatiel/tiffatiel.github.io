@@ -23,7 +23,17 @@ const Seo: React.FC<PropTypes> = ({title, image, description}) => {
   return (
     <>
       <title>{titleText}</title>
+
       <meta name="image" content={imageUrl} />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={titleText} />
+      <meta
+        property="og:description"
+        content={description || defaultDescription}
+      />
+      <meta property="og:image" content={imageUrl} />
+
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={titleText} />
       <meta
