@@ -5,7 +5,7 @@ const config: GatsbyConfig = {
     title: `Tiffatiel Art`,
     siteUrl: `https://tiffatiel.com`,
     description: `Independent comic artist focused on creating short stories with cute art and emotional themes.`,
-    image: `/icon.png`,
+    image: `/images/icon.png`,
     twitterUsername: `@tiffatiel`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
