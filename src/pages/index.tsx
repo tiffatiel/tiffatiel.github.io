@@ -14,7 +14,7 @@ const IndexPage = ({data}: PageProps<Queries.AllComicsQuery>) => {
         {`I'm an independent comic artist focused on creating short stories with
         cute art and emotional themes. My work is available to read both for
         free online and `}
-        <a href="https://store.tiffatiel.com/" target="_blank" rel="noreferrer">
+        <a href="https://mixam.com/print-on-demand/tiffatiel" target="_blank" rel="noreferrer">
           in print
         </a>
         .

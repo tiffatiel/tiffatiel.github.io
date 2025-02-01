@@ -15,7 +15,7 @@ const Header = ({siteTitle}: Props) => (
       </Link>
       <Link to="/">Comics</Link>
       <Link to="/resources">Resources</Link>
-      <a href="https://store.tiffatiel.com/" target="_blank" rel="noreferrer">
+      <a href="https://mixam.com/print-on-demand/tiffatiel" target="_blank" rel="noreferrer">
         Store
       </a>
     </div>
